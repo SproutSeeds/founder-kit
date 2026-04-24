@@ -1,0 +1,38 @@
+{
+  "name": "founder-kit",
+  "version": "0.1.0",
+  "description": "A command-line operating rhythm for founders and business owners.",
+  "type": "module",
+  "bin": {
+    "founder": "./bin/founder.js",
+    "founder-kit": "./bin/founder.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./animation": "./src/animation.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/founder.js",
+    "demo": "node ./bin/founder.js --demo",
+    "test": "node --test"
+  },
+  "keywords": [
+    "founder",
+    "startup",
+    "business",
+    "entrepreneur",
+    "cli",
+    "operating-system"
+  ],
+  "author": "Fractal Research Group LLC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.18"
+  }
+}
