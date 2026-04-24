@@ -22,10 +22,11 @@ test("parseArgs rejects unknown flags", () => {
 test("renderFounderFrame includes the phase engine", () => {
   const frame = renderFounderFrame(1);
 
-  assert.match(frame, /FOUNDER-KIT/);
-  assert.match(frame, /AGENT-FIRST OPS/);
+  assert.match(frame, /founder-kit/);
+  assert.match(frame, /agent-first founder loop/);
   assert.match(frame, new RegExp(MASCOT_NAME));
-  assert.match(frame, /founder brief/);
+  assert.match(frame, /write the brief/);
+  assert.match(frame, /task made agent-readable/);
   assert.match(frame, /\[signal\]--\[BRIEF\]--\[agent\]--\[ship\]--\[cadence\]/);
 });
 

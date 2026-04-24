@@ -1,82 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
-  <title id="title">founder-kit retro terminal animation</title>
-  <desc id="desc">An animated retro terminal showing Scout-01 booting an agent-first founder operating loop.</desc>
-  <defs>
-    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#06150d"/>
-      <stop offset="0.55" stop-color="#07100f"/>
-      <stop offset="1" stop-color="#101206"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2.1" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <pattern id="scanlines" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="4" fill="#000000" opacity="0.18"/>
-      <rect y="4" width="8" height="4" fill="#ffffff" opacity="0.025"/>
-    </pattern>
-    <style>
-      .mono { font-family: "SFMono-Regular", "Cascadia Mono", "Roboto Mono", "Courier New", monospace; }
-      .green { fill: #7dff7a; }
-      .dim { fill: #6aa875; }
-      .amber { fill: #ffd166; }
-      .cyan { fill: #74f7ff; }
-      .red { fill: #ff6b6b; }
-      .border { stroke: #7dff7a; stroke-width: 2; fill: none; opacity: 0.82; }
-      .thin { stroke: #6aa875; stroke-width: 1; fill: none; opacity: 0.55; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img" aria-labelledby="title desc">
+  <title id="title">founder-kit agent-first loop</title>
+  <desc id="desc">A simple retro animation for founder-kit showing Scout-01 moving founder intent through an agent loop.</desc>
+  <style>
+    .bg { fill: #07100a; }
+    .screen { fill: #0d1b12; stroke: #6cff7c; stroke-width: 2; }
+    .line { stroke: #6cff7c; stroke-width: 2; opacity: 0.45; }
+    .text { font-family: "SFMono-Regular", "Cascadia Mono", "Roboto Mono", "Courier New", monospace; }
+    .title { fill: #d9ffe0; font-size: 34px; font-weight: 700; }
+    .soft { fill: #8fcf99; font-size: 15px; }
+    .green { fill: #6cff7c; font-size: 18px; }
+    .amber { fill: #ffd166; font-size: 18px; }
+    .cursor { fill: #6cff7c; }
+  </style>
 
-  <rect width="960" height="540" rx="22" fill="#050706"/>
-  <rect x="30" y="28" width="900" height="484" rx="18" fill="url(#screen)" stroke="#203626" stroke-width="3"/>
-  <rect x="30" y="28" width="900" height="484" rx="18" fill="url(#scanlines)" opacity="0.9"/>
-  <rect x="54" y="56" width="852" height="424" rx="6" class="border"/>
-  <line x1="54" y1="112" x2="906" y2="112" class="thin"/>
+  <rect class="bg" width="520" height="260" rx="24"/>
+  <rect class="screen" x="24" y="24" width="472" height="212" rx="14"/>
+  <line class="line" x1="24" y1="82" x2="496" y2="82"/>
 
-  <g class="mono" filter="url(#glow)">
-    <text x="76" y="92" class="green" font-size="30" font-weight="700">FOUNDER-KIT // AGENT-FIRST OPS</text>
-    <text x="748" y="92" class="amber" font-size="20">SCOUT-01</text>
+  <text class="text title" x="50" y="64">founder-kit</text>
+  <text class="text soft" x="315" y="62">SCOUT-01</text>
 
-    <text x="76" y="150" class="dim" font-size="20">human intent</text>
-    <text x="232" y="150" class="green" font-size="20">-&gt;</text>
-    <text x="280" y="150" class="dim" font-size="20">agent task</text>
-    <text x="420" y="150" class="green" font-size="20">-&gt;</text>
-    <text x="468" y="150" class="dim" font-size="20">customer signal</text>
-    <text x="666" y="150" class="green" font-size="20">-&gt;</text>
-    <text x="714" y="150" class="dim" font-size="20">revenue loop</text>
+  <text class="text soft" x="50" y="118">founder intent</text>
+  <text class="text green" x="204" y="118">-&gt;</text>
+  <text class="text soft" x="242" y="118">agent work</text>
+  <text class="text green" x="362" y="118">-&gt;</text>
+  <text class="text soft" x="400" y="118">signal</text>
 
-    <text x="76" y="202" class="cyan" font-size="22">$ scout scan --buyers</text>
-    <text x="76" y="238" class="green" font-size="22">[signal]</text>
-    <text x="190" y="238" class="dim" font-size="22">call notes + CRM crumbs + support tickets</text>
+  <text class="text amber" x="50" y="165">$ founder</text>
 
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.34;0.42" dur="6s" repeatCount="indefinite"/>
-      <text x="76" y="292" class="green" font-size="24">&gt; one sharp customer pain found</text>
-      <text x="76" y="330" class="amber" font-size="24">&gt; draft a 90 minute agent task</text>
-      <text x="76" y="368" class="dim" font-size="24">&gt; evidence required: quote, link, next action</text>
-    </g>
-
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.38;0.68;0.76" dur="6s" repeatCount="indefinite"/>
-      <text x="76" y="292" class="green" font-size="24">&gt; agent bus online</text>
-      <text x="76" y="330" class="amber" font-size="24">&gt; founder judgment converted to instructions</text>
-      <text x="76" y="368" class="dim" font-size="24">&gt; smallest customer-facing move queued</text>
-    </g>
-
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.64;0.74;1" dur="6s" repeatCount="indefinite"/>
-      <text x="76" y="292" class="green" font-size="24">&gt; shipped artifact reviewed by human</text>
-      <text x="76" y="330" class="amber" font-size="24">&gt; result logged, owner named, cadence locked</text>
-      <text x="76" y="368" class="dim" font-size="24">&gt; next loop starts from real signal</text>
-    </g>
-
-    <text x="76" y="432" class="cyan" font-size="20">[SIGNAL]--[BRIEF]--[AGENT]--[SHIP]--[CADENCE]</text>
-    <rect x="742" y="413" width="16" height="24" class="green">
-      <animate attributeName="opacity" values="1;0.15;1" dur="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <text x="766" y="432" class="green" font-size="20">READY</text>
+  <g class="text green" font-size="19">
+    <text x="50" y="202" opacity="0">
+      signal -&gt; brief
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.10;0.30;0.40" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="50" y="202" opacity="0">
+      brief -&gt; agent
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.40;0.60;0.70" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="50" y="202" opacity="0">
+      agent -&gt; ship
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.58;0.68;0.84;0.92" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="50" y="202" opacity="0">
+      ship -&gt; cadence
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.82;0.92;1" dur="4.8s" repeatCount="indefinite"/>
+    </text>
   </g>
+
+  <rect class="cursor" x="223" y="186" width="12" height="21">
+    <animate attributeName="opacity" values="1;0.2;1" dur="0.7s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="166;178;184;196;223" keyTimes="0;0.35;0.55;0.78;1" dur="4.8s" repeatCount="indefinite"/>
+  </rect>
 </svg>

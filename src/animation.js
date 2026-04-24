@@ -11,34 +11,28 @@ const ANSI = {
 
 const PHASES = ["signal", "brief", "agent", "ship", "cadence"];
 const MARKERS = [">", ">>", ">>>", ">>>>", ">>>>>"];
-const PANEL_WIDTH = 62;
 export const MASCOT_NAME = "Scout-01";
 
 const BOOT_FRAMES = [
   {
-    mode: "signal radar",
-    command: "scout scan --buyers",
-    output: "signal.log -> one pain, one payer, one open question"
+    prompt: "read the room",
+    output: "customer signal found"
   },
   {
-    mode: "founder brief",
-    command: "scout brief --constraint",
-    output: "brief.md   -> bottleneck named, owner assigned"
+    prompt: "write the brief",
+    output: "task made agent-readable"
   },
   {
-    mode: "agent dispatch",
-    command: "scout run --agent",
-    output: "agent.bus  -> task queued, evidence required"
+    prompt: "send the agent",
+    output: "smallest move delegated"
   },
   {
-    mode: "ship loop",
-    command: "scout ship --smallest-move",
-    output: "release    -> customer-facing move prepared"
+    prompt: "ship the proof",
+    output: "customer-facing move ready"
   },
   {
-    mode: "cadence lock",
-    command: "scout log --next-review",
-    output: "cadence.db -> result, owner, review time saved"
+    prompt: "close the loop",
+    output: "result logged for review"
   }
 ];
 
@@ -64,10 +58,6 @@ export function colorize(value, color, enabled = true) {
   return `${ANSI[color] ?? ""}${value}${ANSI.reset}`;
 }
 
-function renderPanelLine(value, color, enabled) {
-  return `| ${colorize(value.padEnd(PANEL_WIDTH, " "), color, enabled)} |`;
-}
-
 export function renderFounderFrame(step = 0, options = {}) {
   const color = options.color ?? false;
   const active = step % PHASES.length;
@@ -78,21 +68,12 @@ export function renderFounderFrame(step = 0, options = {}) {
   }).join("--");
   const activeOffset = PHASES.slice(0, active).reduce((offset, phase) => offset + phase.length + 4, 1);
   const marker = `${" ".repeat(activeOffset)}${colorize(MARKERS[step % MARKERS.length], "yellow", color)}`;
-  const pulse = "#".repeat((step % 5) + 1).padEnd(5, ".");
-  const border = `+${"-".repeat(PANEL_WIDTH + 2)}+`;
-  const mode = `${MASCOT_NAME} :: ${frame.mode}`;
-  const command = `$ ${frame.command}`;
-  const flow = `boot [${pulse}]  intent -> agent task -> revenue signal`;
 
   return [
-    colorize("FOUNDER-KIT // AGENT-FIRST OPS", "bold", color),
-    colorize(`${MASCOT_NAME} is the retro terminal mascot for delegated founder work`, "dim", color),
-    border,
-    renderPanelLine(mode, "cyan", color),
-    renderPanelLine(command, "green", color),
-    renderPanelLine(flow, "yellow", color),
-    border,
-    frame.output,
+    colorize("founder-kit", "bold", color),
+    colorize("agent-first founder loop", "dim", color),
+    `${colorize(MASCOT_NAME, "cyan", color)}: ${frame.prompt}`,
+    colorize(frame.output, "green", color),
     phaseLine,
     marker
   ].join("\n");

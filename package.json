@@ -1,12 +1,20 @@
 {
   "name": "founder-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An agent-first command-line operating rhythm for founders and business owners.",
   "type": "module",
   "bin": {
     "founder": "./bin/founder.js",
     "founder-kit": "./bin/founder.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SproutSeeds/founder-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SproutSeeds/founder-kit/issues"
+  },
+  "homepage": "https://github.com/SproutSeeds/founder-kit#readme",
   "exports": {
     ".": "./src/index.js",
     "./animation": "./src/animation.js"

@@ -1,14 +1,14 @@
-# founder-kit
-
-An agent-first command-line operating rhythm for founders and business owners.
-
 <p align="center">
-  <img src="./assets/founder-kit-retro.svg" alt="Animated retro terminal for founder-kit showing Scout-01 booting an agent-first founder loop" width="860">
+  <img src="./assets/founder-kit-retro.svg" alt="Simple animated retro founder-kit terminal loop" width="520">
 </p>
 
-`founder-kit` starts with a retro terminal animation featuring Scout-01, the agent-ops mascot for the kit, then prints a daily loop for turning founder judgment into agent-readable work.
+<h1 align="center">founder-kit</h1>
 
-The loop keeps agent work grounded in customer signal, crisp briefs, delegated moves, human review, and cadence.
+<p align="center">
+  Agent-first founder rhythm. Turn founder intent into agent work, customer signal, and cadence.
+</p>
+
+`founder-kit` starts with a small retro terminal animation featuring Scout-01, then prints a daily loop for turning founder judgment into agent-readable work.
 
 ## Usage
 
