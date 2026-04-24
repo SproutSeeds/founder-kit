@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/founder-kit-retro.svg" alt="Simple animated retro founder-kit terminal loop" width="520">
+  <img src="./assets/founder-kit-retro.svg" alt="Animated Scout-01 founder-rock carrying a briefcase of pebbles into an agent queue" width="520">
 </p>
 
 <h1 align="center">founder-kit</h1>
@@ -8,7 +8,7 @@
   Agent-first founder rhythm. Turn founder intent into agent work, customer signal, and cadence.
 </p>
 
-`founder-kit` starts with a small retro terminal animation featuring Scout-01, then prints a daily loop for turning founder judgment into agent-readable work.
+`founder-kit` starts with a small retro terminal animation featuring Scout-01, a sleepy founder-rock with a briefcase full of pebbles, then prints a daily loop for turning founder judgment into agent-readable work.
 
 ## Usage
 
@@ -55,6 +55,6 @@ npm run demo
 
 - Package name: `founder-kit`
 - CLI commands: `founder`, `founder-kit`
-- Mascot: `Scout-01`
+- Mascot: `Scout-01`, the sleepy founder-rock
 - Author: Fractal Research Group LLC
 - Website: https://frg.earth

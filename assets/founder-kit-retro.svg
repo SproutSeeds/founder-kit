@@ -1,54 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img" aria-labelledby="title desc">
-  <title id="title">founder-kit agent-first loop</title>
-  <desc id="desc">A simple retro animation for founder-kit showing Scout-01 moving founder intent through an agent loop.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Scout-01, the founder-kit mascot</title>
+  <desc id="desc">A sleepy founder-rock with a hat, beard, mustache, and a briefcase of pebbles walking through an agent-first founder loop.</desc>
   <style>
-    .bg { fill: #07100a; }
-    .screen { fill: #0d1b12; stroke: #6cff7c; stroke-width: 2; }
-    .line { stroke: #6cff7c; stroke-width: 2; opacity: 0.45; }
+    .bg { fill: #edf7f0; }
+    .shadow { fill: #164a3a; opacity: 0.14; }
+    .ink { stroke: #24352f; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
     .text { font-family: "SFMono-Regular", "Cascadia Mono", "Roboto Mono", "Courier New", monospace; }
-    .title { fill: #d9ffe0; font-size: 34px; font-weight: 700; }
-    .soft { fill: #8fcf99; font-size: 15px; }
-    .green { fill: #6cff7c; font-size: 18px; }
-    .amber { fill: #ffd166; font-size: 18px; }
-    .cursor { fill: #6cff7c; }
+    .title { fill: #24352f; font-size: 34px; font-weight: 800; }
+    .tag { fill: #49675c; font-size: 16px; font-weight: 600; }
+    .tiny { fill: #49675c; font-size: 13px; font-weight: 700; letter-spacing: 0; }
+    .rock { fill: #8d948b; }
+    .rock-light { fill: #aeb5a8; }
+    .hat { fill: #284f43; }
+    .hat-band { fill: #f2c45f; }
+    .case { fill: #9d6336; }
+    .case-dark { fill: #6d3f25; }
+    .pebble { fill: #7e867b; stroke: #24352f; stroke-width: 2; }
+    .agent { fill: #d8efe1; stroke: #4b8d6b; stroke-width: 3; }
+    .agent-text { fill: #2f6d55; font-size: 14px; font-weight: 800; }
   </style>
 
-  <rect class="bg" width="520" height="260" rx="24"/>
-  <rect class="screen" x="24" y="24" width="472" height="212" rx="14"/>
-  <line class="line" x1="24" y1="82" x2="496" y2="82"/>
+  <rect class="bg" width="640" height="360" rx="28"/>
+  <path class="shadow" d="M77 301 C154 283 236 283 310 301 C390 322 486 324 561 302 C563 317 553 329 531 335 L108 335 C84 331 74 319 77 301 Z"/>
 
-  <text class="text title" x="50" y="64">founder-kit</text>
-  <text class="text soft" x="315" y="62">SCOUT-01</text>
+  <text class="text title" x="42" y="58">founder-kit</text>
+  <text class="text tag" x="42" y="86">agent-first founder rhythm</text>
+  <text class="text tag" x="42" y="324">Carry the judgment. Agents move the pebbles.</text>
 
-  <text class="text soft" x="50" y="118">founder intent</text>
-  <text class="text green" x="204" y="118">-&gt;</text>
-  <text class="text soft" x="242" y="118">agent work</text>
-  <text class="text green" x="362" y="118">-&gt;</text>
-  <text class="text soft" x="400" y="118">signal</text>
-
-  <text class="text amber" x="50" y="165">$ founder</text>
-
-  <g class="text green" font-size="19">
-    <text x="50" y="202" opacity="0">
-      signal -&gt; brief
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.10;0.30;0.40" dur="4.8s" repeatCount="indefinite"/>
-    </text>
-    <text x="50" y="202" opacity="0">
-      brief -&gt; agent
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.40;0.60;0.70" dur="4.8s" repeatCount="indefinite"/>
-    </text>
-    <text x="50" y="202" opacity="0">
-      agent -&gt; ship
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.58;0.68;0.84;0.92" dur="4.8s" repeatCount="indefinite"/>
-    </text>
-    <text x="50" y="202" opacity="0">
-      ship -&gt; cadence
-      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.82;0.92;1" dur="4.8s" repeatCount="indefinite"/>
-    </text>
+  <g transform="translate(400 116)">
+    <rect class="agent" x="0" y="0" width="160" height="38" rx="9"/>
+    <rect class="agent" x="22" y="58" width="138" height="38" rx="9" opacity="0.78"/>
+    <rect class="agent" x="46" y="116" width="114" height="38" rx="9" opacity="0.58"/>
+    <text class="text agent-text" x="22" y="25">SIGNAL</text>
+    <text class="text agent-text" x="44" y="83">BRIEF</text>
+    <text class="text agent-text" x="68" y="141">SHIP</text>
+    <rect x="139" y="18" width="10" height="15" fill="#2f6d55">
+      <animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <rect class="cursor" x="223" y="186" width="12" height="21">
-    <animate attributeName="opacity" values="1;0.2;1" dur="0.7s" repeatCount="indefinite"/>
-    <animate attributeName="x" values="166;178;184;196;223" keyTimes="0;0.35;0.55;0.78;1" dur="4.8s" repeatCount="indefinite"/>
-  </rect>
+  <g id="scout" transform="translate(76 112)">
+    <animateTransform attributeName="transform" type="translate" values="76 112;104 112;132 112;104 112;76 112" keyTimes="0;0.25;0.5;0.75;1" dur="4.8s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0;0 -5;0 0" keyTimes="0;0.22;0.5;0.76;1" dur="1.2s" repeatCount="indefinite"/>
+
+      <ellipse class="shadow" cx="96" cy="190" rx="72" ry="14"/>
+
+      <path class="rock ink" d="M45 73 C39 38 62 12 102 9 C138 6 169 27 178 64 C188 107 164 154 119 166 C78 177 43 152 35 112 C32 98 35 83 45 73 Z"/>
+      <path class="rock-light" d="M68 38 C81 22 114 18 136 29 C111 28 91 39 77 60 C71 70 61 64 68 38 Z" opacity="0.58"/>
+
+      <path class="ink hat" d="M64 24 L155 24 L145 54 L76 54 Z"/>
+      <path class="ink hat" d="M48 54 C80 42 138 42 170 54 L166 67 C127 60 89 60 52 67 Z"/>
+      <rect class="hat-band" x="80" y="42" width="62" height="10" rx="4"/>
+
+      <path class="ink" d="M75 87 C84 82 92 82 101 87" fill="none"/>
+      <path class="ink" d="M123 87 C132 82 140 82 149 87" fill="none"/>
+      <path class="ink" d="M107 104 C101 111 91 113 80 108 C91 123 107 123 113 110 C120 123 138 123 150 108 C137 113 126 111 118 104 Z" fill="#46342a"/>
+      <path class="ink" d="M80 123 C94 151 133 153 153 123 C145 165 92 174 70 134 Z" fill="#514236"/>
+
+      <circle cx="86" cy="77" r="4" fill="#24352f"/>
+      <circle cx="135" cy="77" r="4" fill="#24352f"/>
+      <path d="M64 67 C82 58 99 60 112 67" stroke="#24352f" stroke-width="3" fill="none" opacity="0.35"/>
+      <path d="M119 67 C139 58 154 61 166 69" stroke="#24352f" stroke-width="3" fill="none" opacity="0.35"/>
+
+      <path class="ink" d="M52 153 L34 188" fill="none">
+        <animate attributeName="d" values="M52 153 L34 188;M52 153 L48 188;M52 153 L34 188" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+      <path class="ink" d="M132 162 L152 190" fill="none">
+        <animate attributeName="d" values="M132 162 L152 190;M132 162 L135 190;M132 162 L152 190" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+
+      <g transform="translate(165 100)">
+        <animateTransform attributeName="transform" type="translate" values="165 100;169 94;165 100;162 96;165 100" dur="1.2s" repeatCount="indefinite"/>
+        <path class="ink" d="M8 12 C18 -2 52 -2 62 12" fill="none"/>
+        <rect class="case ink" x="0" y="16" width="72" height="54" rx="8"/>
+        <path class="ink case-dark" d="M0 31 L72 31 L72 70 L0 70 Z"/>
+        <circle class="pebble" cx="18" cy="44" r="8"/>
+        <circle class="pebble" cx="38" cy="40" r="7"/>
+        <circle class="pebble" cx="55" cy="48" r="6"/>
+      </g>
+    </g>
+  </g>
+
+  <g>
+    <circle class="pebble" cx="305" cy="175" r="7">
+      <animate attributeName="cx" values="305;348;392;438" keyTimes="0;0.34;0.68;1" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="175;135;162;139" keyTimes="0;0.34;0.68;1" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.82;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="pebble" cx="292" cy="190" r="6">
+      <animate attributeName="cx" values="292;336;384;461" keyTimes="0;0.34;0.68;1" dur="2.4s" begin="0.55s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="190;152;184;198" keyTimes="0;0.34;0.68;1" dur="2.4s" begin="0.55s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.82;1" dur="2.4s" begin="0.55s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="pebble" cx="282" cy="205" r="5">
+      <animate attributeName="cx" values="282;332;390;485" keyTimes="0;0.34;0.68;1" dur="2.4s" begin="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="205;164;220;255" keyTimes="0;0.34;0.68;1" dur="2.4s" begin="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.82;1" dur="2.4s" begin="1.1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text class="text tiny" x="410" y="98">AGENT QUEUE</text>
 </svg>
