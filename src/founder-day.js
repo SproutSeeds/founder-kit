@@ -2,24 +2,24 @@ export function buildDailyBrief(date = new Date()) {
   const weekday = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
 
   return {
-    title: `${weekday} agent-first founder loop`,
-    thesis: "Turn founder judgment into agent-readable work that creates revenue signal.",
+    title: `${weekday} agent-first compliance loop`,
+    thesis: "Turn founder intent into official-source tasks, evidence, and renewal cadence.",
     prompts: [
       {
-        label: "Signal",
-        text: "Point an agent at one real customer thread, call note, or buying signal."
+        label: "Profile",
+        text: "Confirm entity, activity, state, county, city, and business-location facts."
       },
       {
-        label: "Brief",
-        text: "Convert the bottleneck into a crisp task with inputs, limits, and evidence required."
+        label: "Scout",
+        text: "Check state maintenance, county/city licensing, zoning, tax, and regulated permits."
       },
       {
-        label: "Agent",
-        text: "Delegate the smallest useful move an agent can complete or prepare today."
+        label: "Binder",
+        text: "Save official URLs, filings, receipt numbers, agency notes, and renewal dates."
       },
       {
         label: "Cadence",
-        text: "Review the output, capture the result, and schedule the next human decision."
+        text: "Review unresolved questions and schedule the next required founder decision."
       }
     ]
   };

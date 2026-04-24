@@ -15,24 +15,24 @@ export const MASCOT_NAME = "Scout-01";
 
 const BOOT_FRAMES = [
   {
-    prompt: "read the room",
-    output: "customer signal found"
+    prompt: "resolve the place",
+    output: "state county city"
   },
   {
-    prompt: "write the brief",
-    output: "task made agent-readable"
+    prompt: "check the rules",
+    output: "license zoning tax"
   },
   {
-    prompt: "send the agent",
-    output: "smallest move delegated"
+    prompt: "save the proof",
+    output: "official source captured"
   },
   {
-    prompt: "ship the proof",
-    output: "customer-facing move ready"
+    prompt: "track renewals",
+    output: "calendar stays warm"
   },
   {
-    prompt: "close the loop",
-    output: "result logged for review"
+    prompt: "buy clean",
+    output: "diligence before closing"
   }
 ];
 
@@ -71,7 +71,7 @@ export function renderFounderFrame(step = 0, options = {}) {
 
   return [
     colorize("founder-kit", "bold", color),
-    colorize("agent-first founder loop", "dim", color),
+    colorize("agent-first compliance scout", "dim", color),
     `${colorize(MASCOT_NAME, "cyan", color)}: ${frame.prompt}`,
     colorize(frame.output, "green", color),
     phaseLine,
