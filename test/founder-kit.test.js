@@ -22,10 +22,11 @@ test("parseArgs rejects unknown flags", () => {
 test("renderFounderFrame includes the phase engine", () => {
   const frame = renderFounderFrame(1);
 
-  assert.match(frame, /Founder Kit/);
+  assert.match(frame, /FOUNDER-KIT/);
+  assert.match(frame, /AGENT-FIRST OPS/);
   assert.match(frame, new RegExp(MASCOT_NAME));
-  assert.match(frame, /checks the constraint/);
-  assert.match(frame, /\[idea\]--\[CUSTOMER\]--\[offer\]--\[cash\]--\[cadence\]/);
+  assert.match(frame, /founder brief/);
+  assert.match(frame, /\[signal\]--\[BRIEF\]--\[agent\]--\[ship\]--\[cadence\]/);
 });
 
 test("shouldAnimate stays quiet for non-TTY streams unless forced", () => {
@@ -39,7 +40,8 @@ test("formatDailyBrief produces the founder loop", () => {
   const brief = buildDailyBrief(new Date("2026-04-24T12:00:00Z"));
   const output = formatDailyBrief(brief);
 
-  assert.match(output, /Friday founder loop/);
+  assert.match(output, /Friday agent-first founder loop/);
   assert.match(output, /Signal:/);
+  assert.match(output, /Agent:/);
   assert.match(output, /Cadence:/);
 });

@@ -9,43 +9,36 @@ const ANSI = {
   yellow: "\x1b[33m"
 };
 
-const PHASES = ["idea", "customer", "offer", "cash", "cadence"];
-const MARKERS = ["^", "/|\\", "\\|/", "/|\\", "^"];
-export const MASCOT_NAME = "Scout";
+const PHASES = ["signal", "brief", "agent", "ship", "cadence"];
+const MARKERS = [">", ">>", ">>>", ">>>>", ">>>>>"];
+const PANEL_WIDTH = 62;
+export const MASCOT_NAME = "Scout-01";
 
-const MASCOT_FRAMES = [
+const BOOT_FRAMES = [
   {
-    status: "scans for signal",
-    art: [
-      "       .",
-      "    .-|-.",
-      "   / o o \\",
-      "  |   ^   |",
-      "   \\_===_/",
-      "    /| |\\"
-    ]
+    mode: "signal radar",
+    command: "scout scan --buyers",
+    output: "signal.log -> one pain, one payer, one open question"
   },
   {
-    status: "checks the constraint",
-    art: [
-      "       *",
-      "    .-|-.",
-      "   / - - \\",
-      "  |   >   |",
-      "   \\_===_/",
-      "   _/| |\\_"
-    ]
+    mode: "founder brief",
+    command: "scout brief --constraint",
+    output: "brief.md   -> bottleneck named, owner assigned"
   },
   {
-    status: "pushes the move",
-    art: [
-      "      \\|/",
-      "    .-+-.",
-      "   / o O \\",
-      "  |   v   |",
-      "   \\_===_/",
-      "    /|_|\\"
-    ]
+    mode: "agent dispatch",
+    command: "scout run --agent",
+    output: "agent.bus  -> task queued, evidence required"
+  },
+  {
+    mode: "ship loop",
+    command: "scout ship --smallest-move",
+    output: "release    -> customer-facing move prepared"
+  },
+  {
+    mode: "cadence lock",
+    command: "scout log --next-review",
+    output: "cadence.db -> result, owner, review time saved"
   }
 ];
 
@@ -71,22 +64,35 @@ export function colorize(value, color, enabled = true) {
   return `${ANSI[color] ?? ""}${value}${ANSI.reset}`;
 }
 
+function renderPanelLine(value, color, enabled) {
+  return `| ${colorize(value.padEnd(PANEL_WIDTH, " "), color, enabled)} |`;
+}
+
 export function renderFounderFrame(step = 0, options = {}) {
   const color = options.color ?? false;
   const active = step % PHASES.length;
-  const mascot = MASCOT_FRAMES[step % MASCOT_FRAMES.length];
+  const frame = BOOT_FRAMES[active];
   const phaseLine = PHASES.map((phase, index) => {
     const label = index === active ? colorize(phase.toUpperCase(), "green", color) : phase;
     return `[${label}]`;
   }).join("--");
   const activeOffset = PHASES.slice(0, active).reduce((offset, phase) => offset + phase.length + 4, 1);
   const marker = `${" ".repeat(activeOffset)}${colorize(MARKERS[step % MARKERS.length], "yellow", color)}`;
+  const pulse = "#".repeat((step % 5) + 1).padEnd(5, ".");
+  const border = `+${"-".repeat(PANEL_WIDTH + 2)}+`;
+  const mode = `${MASCOT_NAME} :: ${frame.mode}`;
+  const command = `$ ${frame.command}`;
+  const flow = `boot [${pulse}]  intent -> agent task -> revenue signal`;
 
   return [
-    colorize("Founder Kit", "bold", color),
-    colorize(`${MASCOT_NAME} turns founder chaos into an operating rhythm`, "dim", color),
-    ...mascot.art,
-    `${colorize(MASCOT_NAME, "cyan", color)} ${colorize(mascot.status, "dim", color)}`,
+    colorize("FOUNDER-KIT // AGENT-FIRST OPS", "bold", color),
+    colorize(`${MASCOT_NAME} is the retro terminal mascot for delegated founder work`, "dim", color),
+    border,
+    renderPanelLine(mode, "cyan", color),
+    renderPanelLine(command, "green", color),
+    renderPanelLine(flow, "yellow", color),
+    border,
+    frame.output,
     phaseLine,
     marker
   ].join("\n");

@@ -1,7 +1,7 @@
 {
   "name": "founder-kit",
-  "version": "0.1.0",
-  "description": "A command-line operating rhythm for founders and business owners.",
+  "version": "0.1.1",
+  "description": "An agent-first command-line operating rhythm for founders and business owners.",
   "type": "module",
   "bin": {
     "founder": "./bin/founder.js",
@@ -12,6 +12,7 @@
     "./animation": "./src/animation.js"
   },
   "files": [
+    "assets",
     "bin",
     "src",
     "README.md",
@@ -25,6 +26,9 @@
   "keywords": [
     "founder",
     "startup",
+    "agent",
+    "ai-agent",
+    "agent-first",
     "business",
     "entrepreneur",
     "cli",

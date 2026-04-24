@@ -2,24 +2,24 @@ export function buildDailyBrief(date = new Date()) {
   const weekday = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
 
   return {
-    title: `${weekday} founder loop`,
-    thesis: "Make one clear move from signal to revenue.",
+    title: `${weekday} agent-first founder loop`,
+    thesis: "Turn founder judgment into agent-readable work that creates revenue signal.",
     prompts: [
       {
         label: "Signal",
-        text: "Talk to one real customer or study one real buying signal."
+        text: "Point an agent at one real customer thread, call note, or buying signal."
       },
       {
-        label: "Constraint",
-        text: "Name the one bottleneck blocking revenue, shipping, or learning."
+        label: "Brief",
+        text: "Convert the bottleneck into a crisp task with inputs, limits, and evidence required."
       },
       {
-        label: "Move",
-        text: "Ship the smallest useful action that tests the constraint."
+        label: "Agent",
+        text: "Delegate the smallest useful move an agent can complete or prepare today."
       },
       {
         label: "Cadence",
-        text: "Write down the result, next owner, and next review time."
+        text: "Review the output, capture the result, and schedule the next human decision."
       }
     ]
   };
