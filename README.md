@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SproutSeeds/founder-kit/main/assets/founder-kit-retro.svg?v=0.2.2" alt="Animated Scout-01 founder-rock carrying a briefcase of pebbles into an agent queue" width="520">
+  <img src="https://raw.githubusercontent.com/SproutSeeds/founder-kit/main/assets/founder-kit-retro.svg?v=0.2.3" alt="Animated Scout-01 founder-rock carrying a briefcase of pebbles into an agent queue" width="520">
 </p>
 
 <h1 align="center">founder-kit</h1>
@@ -13,13 +13,13 @@
 ## Usage
 
 ```sh
-npx founder-scout
+npx solo-founder
 ```
 
 After global install:
 
 ```sh
-npm install -g founder-scout
+npm install -g solo-founder
 founder
 ```
 
@@ -95,7 +95,7 @@ npm run demo
 
 ## Package Shape
 
-- Package name: `founder-scout`
+- Package name: `solo-founder`
 - CLI commands: `founder`, `founder-kit`
 - Mascot: `Scout-01`, the sleepy founder-rock
 - Storage: `.founder-kit/founder.json`
