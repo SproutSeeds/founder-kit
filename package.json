@@ -1,6 +1,6 @@
 {
   "name": "solo-founder",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "An agent-first compliance scout for founders starting or buying a business.",
   "type": "module",
   "bin": {

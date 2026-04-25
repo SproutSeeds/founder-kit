@@ -70,8 +70,8 @@ export function renderFounderFrame(step = 0, options = {}) {
   const marker = `${" ".repeat(activeOffset)}${colorize(MARKERS[step % MARKERS.length], "yellow", color)}`;
 
   return [
-    colorize("founder-kit", "bold", color),
-    colorize("agent-first compliance scout", "dim", color),
+    colorize("solo-founder", "bold", color),
+    colorize("one founder, one checklist, agent help", "dim", color),
     `${colorize(MASCOT_NAME, "cyan", color)}: ${frame.prompt}`,
     colorize(frame.output, "green", color),
     phaseLine,

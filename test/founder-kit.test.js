@@ -52,8 +52,8 @@ test("parseArgs rejects unknown commands", () => {
 test("renderFounderFrame includes the phase engine", () => {
   const frame = renderFounderFrame(1);
 
-  assert.match(frame, /founder-kit/);
-  assert.match(frame, /agent-first compliance scout/);
+  assert.match(frame, /solo-founder/);
+  assert.match(frame, /one founder, one checklist, agent help/);
   assert.match(frame, new RegExp(MASCOT_NAME));
   assert.match(frame, /check the rules/);
   assert.match(frame, /license zoning tax/);

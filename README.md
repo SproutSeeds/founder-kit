@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SproutSeeds/founder-kit/main/assets/founder-kit-retro.svg?v=0.2.3" alt="Animated Scout-01 founder-rock carrying a briefcase of pebbles into an agent queue" width="520">
+  <img src="https://raw.githubusercontent.com/SproutSeeds/founder-kit/main/assets/founder-kit-retro.svg?v=0.2.4" alt="Animated Scout-01 solo founder-rock carrying compliance pebbles into a checklist" width="520">
 </p>
 
-<h1 align="center">founder-kit</h1>
+<h1 align="center">solo-founder</h1>
 
 <p align="center">
-  Agent-first founder compliance rhythm. Turn "I want to start or buy this business here" into a verified local checklist.
+  One founder. One checklist. Agent help for local business compliance.
 </p>
 
-`founder-kit` starts with Scout-01, a sleepy founder-rock with a briefcase full of pebbles, then helps organize state, county, city, zoning, licensing, evidence, renewals, and buy-LLC diligence.
+`solo-founder` starts with Scout-01, a sleepy solo founder-rock with a briefcase full of compliance pebbles, then helps organize state, county, city, zoning, licensing, evidence, renewals, and buy-LLC diligence.
 
 ## Usage
 
@@ -97,7 +97,7 @@ npm run demo
 
 - Package name: `solo-founder`
 - CLI commands: `founder`, `founder-kit`
-- Mascot: `Scout-01`, the sleepy founder-rock
+- Mascot: `Scout-01`, the sleepy solo founder-rock
 - Storage: `.founder-kit/founder.json`
 - Author: Fractal Research Group LLC
 - Website: https://frg.earth

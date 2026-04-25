@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
-  <title id="title">Scout-01, the founder-kit mascot</title>
-  <desc id="desc">A sleepy founder-rock with a hat, beard, mustache, and a briefcase of pebbles walking through an agent-first founder loop.</desc>
+  <title id="title">Scout-01, the solo-founder mascot</title>
+  <desc id="desc">A sleepy solo founder-rock with a hat, beard, mustache, and a briefcase of compliance pebbles walking through an agent-first checklist.</desc>
   <style>
     .bg { fill: #edf7f0; }
     .shadow { fill: #164a3a; opacity: 0.14; }
@@ -16,25 +16,25 @@
     .case { fill: #9d6336; }
     .case-dark { fill: #6d3f25; }
     .pebble { fill: #7e867b; stroke: #24352f; stroke-width: 2; }
-    .agent { fill: #d8efe1; stroke: #4b8d6b; stroke-width: 3; }
-    .agent-text { fill: #2f6d55; font-size: 14px; font-weight: 800; }
+    .agent { fill: #fff6d8; stroke: #9f7a24; stroke-width: 3; }
+    .agent-text { fill: #735514; font-size: 13px; font-weight: 800; }
   </style>
 
   <rect class="bg" width="640" height="360" rx="28"/>
   <path class="shadow" d="M77 301 C154 283 236 283 310 301 C390 322 486 324 561 302 C563 317 553 329 531 335 L108 335 C84 331 74 319 77 301 Z"/>
 
-  <text class="text title" x="42" y="58">founder-kit</text>
-  <text class="text tag" x="42" y="86">agent-first founder rhythm</text>
-  <text class="text tag" x="42" y="324">Carry the judgment. Agents move the pebbles.</text>
+  <text class="text title" x="42" y="58">solo-founder</text>
+  <text class="text tag" x="42" y="86">one founder. one checklist. agent help.</text>
+  <text class="text tag" x="42" y="324">Scout-01 carries the judgment. Agents sort the pebbles.</text>
 
   <g transform="translate(400 116)">
     <rect class="agent" x="0" y="0" width="160" height="38" rx="9"/>
     <rect class="agent" x="22" y="58" width="138" height="38" rx="9" opacity="0.78"/>
     <rect class="agent" x="46" y="116" width="114" height="38" rx="9" opacity="0.58"/>
-    <text class="text agent-text" x="22" y="25">SIGNAL</text>
-    <text class="text agent-text" x="44" y="83">BRIEF</text>
-    <text class="text agent-text" x="68" y="141">SHIP</text>
-    <rect x="139" y="18" width="10" height="15" fill="#2f6d55">
+    <text class="text agent-text" x="18" y="25">LOCATION</text>
+    <text class="text agent-text" x="42" y="83">LICENSE</text>
+    <text class="text agent-text" x="66" y="141">RENEW</text>
+    <rect x="139" y="18" width="10" height="15" fill="#735514">
       <animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite"/>
     </rect>
   </g>
@@ -100,5 +100,5 @@
     </circle>
   </g>
 
-  <text class="text tiny" x="410" y="98">AGENT QUEUE</text>
+  <text class="text tiny" x="410" y="98">CHECKLIST</text>
 </svg>
