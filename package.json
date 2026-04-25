@@ -1,6 +1,6 @@
 {
-  "name": "@sproutseeds/founder-kit",
-  "version": "0.2.1",
+  "name": "founder-scout",
+  "version": "0.2.2",
   "description": "An agent-first compliance scout for founders starting or buying a business.",
   "type": "module",
   "bin": {

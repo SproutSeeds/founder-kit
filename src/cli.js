@@ -142,7 +142,7 @@ export function helpText() {
     "  -v, --version      print the package version",
     "  -h, --help         show this help",
     "",
-    "Package: @sproutseeds/founder-kit",
+    "Package: founder-scout",
     "Command: founder"
   ].join("\n");
 }
